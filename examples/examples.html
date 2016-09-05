@@ -1,0 +1,149 @@
+<! DOCTYPE html> 
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>EasyParallax Plugin for Jquery (examples)</title>
+		<meta name="author" content="David Richart" >
+		
+		<style>
+			* {font-family: Verdana,sans-serif; color:#000;}
+			body {margin:0; padding:0;}
+			.header {font-size:11px; width:80%; margin:30px auto; text-align:center; border:solid #CCC 1px; padding:10px 0 40px 0; }
+			h2 {width:90%; margin:20px auto;}
+			.container {width:100%; min-height:450px; z-index:800;}
+			.container__txt {position:absolute; bottom:20%; left:10%; width:30%; padding:10px; background-color:rgba(0,0,0,0.3); color:#FFF; z-index:1000;}
+			.description {position:relative; width:80%; margin:50px auto;} 
+			.description__type {position:relative; } 
+			.description__code {padding:10px; background-color:#F1F1F1; font-size:12px;} 
+			.footer {background-color:#556a7b; color:#FFF; padding:10px; font-size:11px; text-align:center; height:400px;}
+			.footer	a {color:#FFF;}
+		</style>
+	</head>
+	
+	<body>
+	
+		<header class="header">
+			<h1>EasyParallax Plugin for Jquery - Examples</h1>
+			
+			<div>A lightweight, easy-to-use, jQuery plugin for adding a simple vertical parallax background.</div>
+			<div>Full documentation on <a href="https://github.com/davidrichart/jquery-easyparallax" target="_blank">Github</a></div>
+		</header>
+		
+		
+		<h2>First example</h2>
+		
+		<div class="example">
+			<div class="container js-example1" data-bg="images/bg_1000.jpg">
+				<div class="container__txt">A functional example with minimum attributes and options.<br/>One background image only.</div>
+			</div>
+		</div>
+		
+		<div class="description">
+<div class="description__type">PHP / HTML</div>
+<pre class="description__code">
+	&lt;div class="container js-example1" data-bg="images/bg_1000.jpg"&gt;
+		&lt;div class="container__txt">...&lt;/div&gt;
+	&lt;/div&gt;
+</pre>	
+
+<div class="description__type">JS</div>
+<pre class="description__code">
+	$('.js-example1').easyParallax();
+</pre>	
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<h2>Second example</h2>
+		
+		<div class="example">
+			<div class="container js-example2" data-bg="images/bg.jpg" data-bg500="images/bg_500.jpg"  data-bg1000="images/bg_1000.jpg">
+				<div class="container__txt">An example including three backgrounds.<br/>The parallax effect starting work from a width browser value of 500px.<br/>Debug informations are available into browser console (F12)</div>
+			</div>
+		</div>
+		
+		<div class="description">
+<div class="description__type">PHP / HTML</div>
+<pre class="description__code">
+	&lt;div class="container js-example2" data-bg="images/bg.jpg" data-bg500="images/bg_500.jpg"  data-bg1000="images/bg_1000.jpg"&gt;
+		&lt;div class="container__txt">...&lt;/div&gt;
+	&lt;/div&gt;
+</pre>	
+		
+	
+<div class="description__type">JS</div>
+<pre class="description__code">
+	$('.js-example2').easyParallax({
+		debug: true,
+		alignment : 'right',
+		effectAmount : 100,
+		effectThreshold : 500
+	});
+</pre>	
+		</div>
+			
+			
+			
+			
+			
+			
+		<h2>Third example</h2>
+		
+		<div class="example">
+			<div class="container js-example3" data-bg="images/bg_1000.jpg">
+				<div class="container__txt">A simple example using the callback function</div>
+			</div>
+		</div>
+		
+		<div class="description">
+<div class="description__type">PHP / HTML</div>
+<pre class="description__code">
+	&lt;div class="container js-example3" data-bg="images/bg1000.jpg"&gt;
+		&lt;div class="container__txt">...&lt;/div&gt;
+	&lt;/div&gt;
+</pre>	
+		
+<div class="description__type">JS</div>
+<pre class="description__code">
+	$('.js-example3').easyParallax(
+		isReady : function(){
+			this.find('img').css('opacity', '0.3');
+			this.css('background-color', '#556a7b');
+		}
+	);
+</pre>		
+</div>
+<footer class="footer">
+	<a href="https://github.com/davidrichart/jquery-easyparallax" target="_blank">https://github.com/davidrichart/jquery-easyparallax</a>
+</footer>	
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="../dist/jquery.easyparallax-1.0.0.min.js"></script>
+		
+		<script type="text/javascript">
+			$('.js-example1').easyParallax();
+			
+			$('.js-example2').easyParallax({
+				debug: true,
+				alignment : 'right',
+				effectAmount : 100,
+				effectThreshold : 500
+			});
+			
+			$('.js-example3').easyParallax({
+				isReady : function(){
+					this.find('img').css('opacity', '0.3');
+					this.css('background-color', '#556a7b');
+				}
+			});
+		</script> 
+		
+	</body>
+</html>
+
+
