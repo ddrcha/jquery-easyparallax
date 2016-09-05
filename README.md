@@ -1,13 +1,11 @@
 # jQuery.easyParallax 
 
-About
-=====
+## About
 
 A lightweight, easy-to-use, jQuery plugin for adding a simple vertical parallax background
 
 
-Compatibility
-====
+## Compatibility
 
 Tested successfully with jQuery versions and browsers listed below : 
 - jQuery v1.7.0 to v1.12.4
@@ -21,14 +19,12 @@ Windows
 - Opera (v39)
 
 
-Licence
-====
+## Licence
 
 Plugin licensed under the CC BY-ND 2.0 license
 
 
-Installation
-====
+## Installation
 
 EasyParallax requires only jQuery main library to work.
 
@@ -38,8 +34,7 @@ EasyParallax requires only jQuery main library to work.
 ```
 
 
-Simple usage
-====
+## Simple usage
 
 To add a parallax background behind a container, you have to add only a "data-bg" attribute (including the path to the image to display) and active the plugin using a class or an id attribute.
 ```
@@ -53,10 +48,9 @@ To add a parallax background behind a container, you have to add only a "data-bg
 ```
 
 
-To go even farther 
-====
+## To go even farther 
 
-##Options
+### Options
 
 EasyParallax plugin offers several options to customize it. Theses options must be passed when the plugin is instancied. 
 
@@ -69,7 +63,7 @@ EasyParallax plugin offers several options to customize it. Theses options must 
 | `isReady` | [callback function] |  | Function called when the bg image is completely loaded, placed and when the parallax function is set to on. "this" enable to target the div element including the background image | 
 
 
-##Responsive
+### Responsive
 
 EasyParallax plugin enables you also to set many backgrounds images to a container and to display each following the width browser value :
 
@@ -84,7 +78,7 @@ In this example :
 You can add 'data-bg[numeric]' attributes as much as you want. Pay just attention to respect the right syntax and not add several times the same attribute (because the last attribute erase the previous one !).
 
 
-##Full demonstration 
+## Full demonstration 
 
 This example include :
 - the managment of two background images, a static one for the small devices and a second one when plugin is activated (above 600px),
